@@ -1,0 +1,4 @@
+# The kit needs very little. yt-dlp is the data source (no YouTube API key).
+pyyaml>=6.0        # reads config/vertical.yaml + inputs/subjects.yaml
+openpyxl>=3.1      # writes the optional human-readable XLSX view (pipeline works without it)
+yt-dlp>=2025.1.1   # the only data source; a system install (brew install yt-dlp) also works
