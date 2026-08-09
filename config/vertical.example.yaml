@@ -1,0 +1,54 @@
+# =============================================================================
+# THE ONE FILE THAT MAKES THIS KIT YOURS.
+# =============================================================================
+# This example is filled in for a fictional demo vertical (a made-up "MATH"
+# exam-prep channel) so you can see a real, working configuration end to end.
+# Setup copies this to config/vertical.yaml and walks you through changing it
+# for YOUR vertical. You can also copy + edit it by hand.
+#
+# Nothing about the pipeline lives here except settings. The proven engine in
+# src/ is shared and never edited. You only ever change this file and the files
+# in inputs/.
+# -----------------------------------------------------------------------------
+
+vertical:
+  name: "MATH"                     # short exam code. Goes in the master sheet's course column.
+  display_name: "Demo MATH Prep"   # friendly name for logs and the QA note header.
+  timezone: "Asia/Kolkata"         # all dates are in this timezone.
+
+# Your own YouTube channel(s) for this vertical. Most verticals have ONE.
+# Add a second entry only if you run a separate (e.g. English-medium) channel;
+# when there are two or more, same-session livestreams are de-duplicated and the
+# primary channel's row is the one kept.
+channels:
+  - label: "Main"              # short internal name; shows up in block names (Live_Main, ...)
+    handle: "@MathPrepDemo"    # @handle, a full channel URL, or a UC... channel id all work
+    language: "main"           # "main" or "english". "english" adds the "Eng- " shorts prefix.
+    is_primary: true
+
+categorization:
+  shorts_max_seconds: 180      # <= this AND not a livestream -> Short
+  longform_min_seconds: 300    # >= this AND not a livestream -> Long-form
+  # the 181-299s gap is excluded on purpose (no genuine long-form under 5 minutes)
+  marathon_min_minutes: 240    # a livestream this long (or with "marathon" in the title)
+                               # is split into one row per faculty named in the title
+
+discovery:
+  lookback_days: 30            # how far back verify re-walks to catch an early-announced live
+  # Roughly how much you publish in a normal WEEK. This powers the safety check
+  # that shouts if a normally-active category comes back empty (dropped data).
+  # Put your real cadence here; 0 means "quiet is normal for this type".
+  expected_weekly:
+    live: 5
+    longform: 3
+    shorts: 12
+
+subjects:
+  file: "inputs/subjects.yaml" # keyword -> subject rules live in this file
+
+roster:
+  faculties_file: "inputs/faculties.csv"
+  aliases_file: "inputs/aliases.csv"
+  emails_file: "inputs/faculty_emails.csv"
+  placeholder: "Channel Official"  # written in the FACULTY cell when no individual can be
+                                   # identified. Never blank, never a guess.

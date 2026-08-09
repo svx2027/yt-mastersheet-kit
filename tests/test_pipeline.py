@@ -23,20 +23,20 @@ def make_cfg(**over) -> KitConfig:
         name="MATH", display_name="Demo MATH Prep", timezone="Asia/Kolkata",
         channels=[Channel("Main", "@MathPrepDemo", "main", True)],
         shorts_max_seconds=180, longform_min_seconds=300, marathon_min_minutes=240,
-        lookback_days=30, expected_weekly={"live": 30, "longform": 8, "shorts": 10},
+        lookback_days=30, expected_weekly={"live": 5, "longform": 3, "shorts": 12},
         placeholder="Channel Official",
     )
-    cfg.roster = ["Asha Mehta Ma'am", "Rohan Verma", "Kabir Nair"]
-    cfg.aliases = {"Asha Mehta Ma'am": ["Asha Ma'am", "Asha Mehta"]}
-    cfg.emails = {"Rohan Verma": "rohan@example.com"}
+    cfg.roster = ["Meera Iyer Ma'am", "Arjun Rao Sir", "Devika Menon"]
+    cfg.aliases = {"Meera Iyer Ma'am": ["Meera Ma'am", "Meera Iyer"]}
+    cfg.emails = {"Arjun Rao Sir": "arjun@example.com"}
     cfg.subject_keywords = [
         ("Algebra", ["algebra", "linear equations", "quadratic equations"]),
-        ("Current Affairs/GK", ["current affairs", "general knowledge"]),
-        ("Reading & Vocabulary", ["reading comprehension", "vocabulary drill", "word power"]),
+        ("Geometry", ["geometry", "triangles", "coordinate geometry"]),
+        ("Statistics & Probability", ["statistics", "probability"]),
         ("Arithmetic", [r"\barithmetic\b", "percentages"]),
     ]
-    cfg.default_subject_by_faculty = {"Rohan Verma": "Current Affairs/GK"}
-    cfg.brand_content_patterns = ["channel kyc", "campus life"]
+    cfg.default_subject_by_faculty = {"Arjun Rao Sir": "Geometry"}
+    cfg.brand_content_patterns = ["meet the instructors", "orientation session"]
     for k, v in over.items():
         setattr(cfg, k, v)
     return cfg
@@ -99,7 +99,7 @@ class TestCategorize(unittest.TestCase):
         # publish 2024-01-15 20:09; air 2024-01-16 07:00 -> must date to the AIR day
         d = C.categorize(raw(was_live=True, live_status="was_live", duration=3444,
                              timestamp=1705329540, release_timestamp=1705368600,
-                             source_tab="streams", title="Newspaper Analysis"), self.cfg)
+                             source_tab="streams", title="Live Doubt Session"), self.cfg)
         self.assertEqual(d.category, "Live")
         self.assertEqual(d.duration_min, 58)
 
@@ -134,16 +134,16 @@ class TestFaculty(unittest.TestCase):
         self.detect = build_detector(self.cfg.roster, self.cfg.aliases)
 
     def test_mam_maam_variants(self):
-        self.assertEqual(self.detect("Algebra Basics | Asha Mam"), ["Asha Mehta Ma'am"])
-        self.assertEqual(self.detect("Algebra Basics | Asha Ma'am"), ["Asha Mehta Ma'am"])
+        self.assertEqual(self.detect("Algebra Basics | Meera Mam"), ["Meera Iyer Ma'am"])
+        self.assertEqual(self.detect("Algebra Basics | Meera Ma'am"), ["Meera Iyer Ma'am"])
 
     def test_alias_maps_to_canonical(self):
-        self.assertEqual(self.detect("Quadratic Equations | Asha Mehta"), ["Asha Mehta Ma'am"])
+        self.assertEqual(self.detect("Quadratic Equations | Meera Iyer"), ["Meera Iyer Ma'am"])
 
     def test_zero_and_two(self):
-        self.assertEqual(self.detect("Weekly Current Affairs Roundup | 29th July"), [])
-        two = self.detect("Combined class | Rohan Verma and Kabir Nair")
-        self.assertEqual(two, ["Kabir Nair", "Rohan Verma"])
+        self.assertEqual(self.detect("Weekly Practice Roundup | 29th July"), [])
+        two = self.detect("Combined class | Arjun Rao Sir and Devika Menon")
+        self.assertEqual(two, ["Arjun Rao Sir", "Devika Menon"])
 
 
 class TestFormat(unittest.TestCase):
@@ -152,21 +152,21 @@ class TestFormat(unittest.TestCase):
         self.detect = build_detector(self.cfg.roster, self.cfg.aliases)
 
     def test_faculty_placeholder_when_none(self):
-        _, disp, amb = F.resolve_faculty("Newspaper Analysis | 29th July", None, self.detect, self.cfg, False)
+        _, disp, amb = F.resolve_faculty("Practice Set Review | 29th July", None, self.detect, self.cfg, False)
         self.assertEqual(disp, "Channel Official")
         self.assertFalse(amb)
 
     def test_faculty_single(self):
-        det, disp, amb = F.resolve_faculty("Quadratic Equations | Asha Mehta", None, self.detect, self.cfg, False)
-        self.assertEqual((det, disp, amb), ("Asha Mehta Ma'am", "Asha Mehta Ma'am", False))
+        det, disp, amb = F.resolve_faculty("Quadratic Equations | Meera Iyer", None, self.detect, self.cfg, False)
+        self.assertEqual((det, disp, amb), ("Meera Iyer Ma'am", "Meera Iyer Ma'am", False))
 
     def test_faculty_needs_manual_split(self):
-        _, disp, amb = F.resolve_faculty("Rohan Verma & Kabir Nair", None, self.detect, self.cfg, False)
+        _, disp, amb = F.resolve_faculty("Arjun Rao Sir & Devika Menon", None, self.detect, self.cfg, False)
         self.assertEqual(disp, F.NEEDS_MANUAL_SPLIT)
         self.assertTrue(amb)
 
     def test_brand_forces_placeholder_even_with_name(self):
-        _, disp, _ = F.resolve_faculty("Channel KYC with Rohan Verma", None, self.detect, self.cfg, True)
+        _, disp, _ = F.resolve_faculty("Orientation Session with Arjun Rao Sir", None, self.detect, self.cfg, True)
         self.assertEqual(disp, "Channel Official")
 
     def test_subject_keyword_first(self):
@@ -174,8 +174,8 @@ class TestFormat(unittest.TestCase):
         self.assertEqual((subj, flagged), ("Algebra", False))
 
     def test_subject_default_by_faculty(self):
-        subj, flagged = F.resolve_subject("Weekly Doubt Session", "Rohan Verma", self.cfg, False)
-        self.assertEqual((subj, flagged), ("Current Affairs/GK", False))
+        subj, flagged = F.resolve_subject("Weekly Doubt Session", "Arjun Rao Sir", self.cfg, False)
+        self.assertEqual((subj, flagged), ("Geometry", False))
 
     def test_subject_blank_flagged(self):
         subj, flagged = F.resolve_subject("Random Topic With No Keyword", "Channel Official", self.cfg, False)
@@ -190,8 +190,8 @@ class TestFormat(unittest.TestCase):
         self.assertTrue(out.startswith("Eng- Naina Mam- "))
 
     def test_shorts_topic_placeholder_drops_prefix(self):
-        out = F.shorts_topic("Syllogism Rule Students Miss", None, False)
-        self.assertEqual(out, "syllogism rule students miss shorts")
+        out = F.shorts_topic("Fraction Rule Students Miss", None, False)
+        self.assertEqual(out, "fraction rule students miss shorts")
 
     def test_dedup_by_session_number(self):
         primary = [{"title": "Class Session 21 | Mentor A", "date_str": "15-Jan-2024",
@@ -214,13 +214,13 @@ class TestFormat(unittest.TestCase):
 
     def test_marathon_split_prefers_faculty_subject(self):
         # whole-marathon title matches a keyword (Algebra), but a per-faculty split row
-        # for Rohan should use HIS default (Current Affairs/GK) instead
-        subj, _ = F.resolve_subject("Full Day Marathon: Algebra + Current Affairs",
-                                    "Rohan Verma", self.cfg, False, faculty_first=True)
-        self.assertEqual(subj, "Current Affairs/GK")
+        # for Arjun should use HIS default (Geometry) instead
+        subj, _ = F.resolve_subject("Full Day Marathon: Algebra + Geometry",
+                                    "Arjun Rao Sir", self.cfg, False, faculty_first=True)
+        self.assertEqual(subj, "Geometry")
         # without faculty_first, the title keyword wins
-        subj2, _ = F.resolve_subject("Full Day Marathon: Algebra + Current Affairs",
-                                     "Rohan Verma", self.cfg, False, faculty_first=False)
+        subj2, _ = F.resolve_subject("Full Day Marathon: Algebra + Geometry",
+                                     "Arjun Rao Sir", self.cfg, False, faculty_first=False)
         self.assertEqual(subj2, "Algebra")
 
 

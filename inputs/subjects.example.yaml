@@ -1,0 +1,68 @@
+# Subject resolution for the demo MATH vertical. Two steps, in order:
+#   1) keyword rules below (checked top to bottom, FIRST match wins -- put the
+#      most specific subjects first)
+#   2) if no keyword matched, a per-faculty default (default_by_faculty)
+#   3) if neither applies, the subject is left blank and the row is FLAGGED in
+#      the QA note for a human -- never guessed.
+#
+# Patterns are lowercase substrings/regex matched against the lowercased title.
+# Edit these for your own exam's sections.
+
+keywords:
+  - subject: "Algebra"
+    patterns:
+      - "algebra"
+      - "linear equations"
+      - "quadratic equations"
+      - "polynomial"
+      - "simultaneous equations"
+
+  - subject: "Geometry"
+    patterns:
+      - "geometry"
+      - "triangles"
+      - "circles"
+      - "coordinate geometry"
+      - "mensuration"
+
+  - subject: "Number Theory"
+    patterns:
+      - "number theory"
+      - "hcf and lcm"
+      - "divisibility"
+      - "prime factorization"
+      - "remainder theorem"
+
+  - subject: "Statistics & Probability"
+    patterns:
+      - "statistics"
+      - "probability"
+      - "permutation"
+      - "combination"
+      - "mean median mode"
+
+  - subject: "Arithmetic"
+    patterns:
+      - "\\barithmetic\\b"
+      - "percentages"
+      - "ratio and proportion"
+      - "time and work"
+      - "profit and loss"
+      - "mixture"
+      - "alligation"
+      - "simple interest"
+      - "compound interest"
+
+# Optional: when no keyword matched, fall back to this teacher's usual subject.
+# Fill in from what each faculty actually teaches. Leave empty to skip.
+default_by_faculty:
+  Arjun Rao Sir: "Geometry"
+
+# Brand / institute content (channel-tour, fees, "why choose us", enrollment-style):
+# force the FACULTY to the placeholder even if a name appears, because this is
+# not a mentor's teaching. Add the exact low-frequency phrases you use.
+brand_content_patterns:
+  - "meet the instructors"
+  - "enrollment walkthrough"
+  - "student testimonials"
+  - "orientation session"
