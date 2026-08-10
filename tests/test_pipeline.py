@@ -69,6 +69,48 @@ class TestDurationAndDates(unittest.TestCase):
         d = C.categorize(r, cfg)
         self.assertEqual(d.date_str, "15-Jan-2024")
 
+    def test_longform_publish_time_ist_midnight_boundary(self):
+        # 1705343399 and 1705343400 are exactly one second apart in absolute
+        # time (18:29:59 UTC and 18:30:00 UTC on the same UTC calendar day),
+        # but that one second straddles IST midnight: 23:59:59 IST on 15-Jan
+        # vs 00:00:00 IST on 16-Jan. A long-form/short is dated by publish
+        # time (timestamp), so this proves dating is done in the configured
+        # timezone (IST), not in UTC -- a UTC-dated pipeline would report
+        # both rows as 15-Jan-2024.
+        cfg = make_cfg()
+        just_before = C.categorize(raw(timestamp=1705343399, duration=600), cfg)
+        just_after = C.categorize(raw(timestamp=1705343400, duration=600), cfg)
+        self.assertEqual(just_before.date_str, "15-Jan-2024")
+        self.assertEqual(just_after.date_str, "16-Jan-2024")
+
+    def test_live_air_time_ist_midnight_boundary(self):
+        # Same one-second UTC gap, but on the AIR time (release_timestamp) of
+        # a genuine livestream, since lives are dated by air time, never by
+        # publish time. Publish time is held fixed and unrelated so the test
+        # isolates the boundary to release_timestamp specifically.
+        cfg = make_cfg()
+        just_before = C.categorize(raw(was_live=True, live_status="was_live", duration=3600,
+                                       timestamp=1705200000, release_timestamp=1705343399,
+                                       source_tab="streams"), cfg)
+        just_after = C.categorize(raw(was_live=True, live_status="was_live", duration=3600,
+                                      timestamp=1705200000, release_timestamp=1705343400,
+                                      source_tab="streams"), cfg)
+        self.assertEqual(just_before.date_str, "15-Jan-2024")
+        self.assertEqual(just_after.date_str, "16-Jan-2024")
+
+    def test_pull_and_verify_agree_at_ist_midnight_boundary(self):
+        # The two independent categorize implementations (pull's C.categorize
+        # and verify's v_categorize) must agree on which side of the boundary
+        # a video falls, not just on ordinary mid-day timestamps.
+        cfg = make_cfg()
+        from src import verify as V
+        r_before = raw(timestamp=1705343399, duration=600)
+        r_after = raw(timestamp=1705343400, duration=600)
+        _, v_ds_before, _ = V.v_categorize(r_before, cfg)
+        _, v_ds_after, _ = V.v_categorize(r_after, cfg)
+        self.assertEqual(C.categorize(r_before, cfg).date_str, v_ds_before)
+        self.assertEqual(C.categorize(r_after, cfg).date_str, v_ds_after)
+
 
 class TestCategorize(unittest.TestCase):
     def setUp(self):
