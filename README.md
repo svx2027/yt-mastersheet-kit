@@ -1,1 +1,176 @@
-IyB5dC1tYXN0ZXJzaGVldC1raXQKCkEgY29uZmlnLWRyaXZlbiBZb3VUdWJlIGNoYW5uZWwgdHJhY2tlci4gUG9pbnQgaXQgYXQgYSBjaGFubmVsLCBnZXQgcGFzdGUtcmVhZHkKbWFzdGVyLXRyYWNrZXIgcm93cyBwbHVzIGEgcGxhaW4tbGFuZ3VhZ2UgUUEgbm90ZSwgYW5kIG5vdGhpbmcgaXMgaGFuZGVkIG92ZXIKdW50aWwgYSBzZWNvbmQsIGluZGVwZW5kZW50bHkgd3JpdHRlbiBwYXNzIG9mIHRoZSBwaXBlbGluZSBhZ3JlZXMgd2l0aCB0aGUgZmlyc3QuCgpSdW5zIGVudGlyZWx5IG9uIFt5dC1kbHBdKGh0dHBzOi8vZ2l0aHViLmNvbS95dC1kbHAveXQtZGxwKTogbm8gWW91VHViZSBEYXRhIEFQSQprZXksIG5vIHF1b3RhIHRvIG1hbmFnZS4KCiMjIFdoYXQgaXQgZG9lcwoKRm9yIGEgZGF0ZSByYW5nZSwgdGhlIGtpdDoKCjEuIERpc2NvdmVycyBldmVyeSB2aWRlbyBhIGNoYW5uZWwgcHVibGlzaGVkIGluIHRoYXQgd2luZG93LCBzdHJhaWdodCBmcm9tIHRoZQogICBjaGFubmVsJ3Mgb3duIGAvdmlkZW9zYCwgYC9zaG9ydHNgLCBhbmQgYC9zdHJlYW1zYCB0YWJzIChuZXZlciBhIGtleXdvcmQKICAgc2VhcmNoLCB3aGljaCBpcyBhIGxvc3N5IGluZGV4IG9mIHdoYXQgYSBjaGFubmVsIGFjdHVhbGx5IHB1Ymxpc2hlZCkuCjIuIENsYXNzaWZpZXMgZWFjaCBvbmUgaW50byAqKkxpdmUqKiwgKipMb25nLWZvcm0qKiwgb3IgKipTaG9ydHMqKiwgZGF0ZXMgaXQKICAgY29ycmVjdGx5LCBhbmQgcm91bmRzIGl0cyBkdXJhdGlvbi4KMy4gSW5kZXBlbmRlbnRseSByZS1kZXJpdmVzIGV2ZXJ5IG9uZSBvZiB0aG9zZSBkZWNpc2lvbnMgb24gYSBzZWNvbmQgY29kZSBwYXRoLAogICB3aXRoIGZyZXNoIGZldGNoZXMsIGJlZm9yZSBhbnl0aGluZyBkb3duc3RyZWFtIGlzIGFsbG93ZWQgdG8gcnVuLgo0LiBCdWlsZHMgdGFiLXNlcGFyYXRlZCBibG9ja3MgaW4gdGhlIGV4YWN0IGNvbHVtbiBsYXlvdXQgYSBzaGFyZWQgdHJhY2tlcgogICBzaGVldCBleHBlY3RzLCByZWFkeSB0byBwYXN0ZSBpbi4KNS4gV3JpdGVzIGFuIGV4ZWN1dGl2ZSBRQSBub3RlOiBhIHNob3J0LCBwbGFpbi1FbmdsaXNoIGxpc3Qgb2YgYW55dGhpbmcgYSBodW1hbgogICBzaG91bGQgZG91YmxlLWNoZWNrIG9uIFlvdVR1YmUgKHBvc3NpYmxlIG1pc3NlcywgdmlkZW9zIHRoYXQgaGFkbid0IGFpcmVkCiAgIHlldCwgcm93cyB3aGVyZSBubyBpbmRpdmlkdWFsIGNvdWxkIGJlIGF0dHJpYnV0ZWQpLgoKQSBub24tdGVjaG5pY2FsIG9wZXJhdG9yIG9ubHkgZXZlciB0b3VjaGVzIG9uZSBZQU1MIGZpbGUgYW5kIGEgaGFuZGZ1bCBvZiBDU1ZzCmluIGBpbnB1dHMvYC4gVGhlIHBpcGVsaW5lIGluIGBzcmMvYCBpcyBjb25maWctZHJpdmVuIGFuZCBuZXZlciBuZWVkcyBlZGl0aW5nCnBlciBjaGFubmVsLgoKIyMgQXJjaGl0ZWN0dXJlCgpgYGBtZXJtYWlkCmZsb3djaGFydCBURAogICAgQ0ZHWyJjb25maWcvdmVydGljYWwueWFtbFxuKyBpbnB1dHMvKi5jc3YiXSAtLT4gUFVMTAogICAgWVRbKCJZb3VUdWJlXG52aWRlb3MgLyBzaG9ydHMgLyBzdHJlYW1zIHRhYnMiKV0gLS0+fHl0LWRscCBmZXRjaHwgUFVMTCgoInB1bGwucHlcbmRpc2NvdmVyICsgY2F0ZWdvcml6ZSIpKQogICAgUFVMTCAtLT4gUk9XU1sicm93cy5qc29uXG5jYW5vbmljYWwgcm93cyJdCiAgICBST1dTIC0tPiBWRVJJRlkoKCJ2ZXJpZnkucHlcbmluZGVwZW5kZW50IHJlLWRlcml2YXRpb24iKSkKICAgIFlUIC0tPnxzZWNvbmQsIGZyZXNoIGZldGNofCBWRVJJRlkKICAgIFZFUklGWSAtLT4gUkVQT1JUeyJ2ZXJpZnlfcmVwb3J0Lmpzb25cblBBU1Mgb3IgRkFJTCJ9CiAgICBSRVBPUlQgLS0gIlBBU1Mgb25seSIgLS0+IEZPUk1BVCgoImZvcm1hdF9tYXN0ZXIucHlcbmJ1aWxkIHRyYWNrZXIgYmxvY2tzIikpCiAgICBSRVBPUlQgLS0gRkFJTCAtLT4gSEFMVFsicnVuIGhhbHRzXG5ub3RoaW5nIGlzIHdyaXR0ZW4iXQogICAgRk9STUFUIC0tPiBCTE9DS1NbImJsb2Nrcy8qLnRzdlxucGFzdGUtcmVhZHkiXQogICAgRk9STUFUIC0tPiBRQSgoInFhX25vdGUucHkiKSkKICAgIFFBIC0tPiBOT1RFWyJxYV9ub3RlLnR4dCJdCmBgYAoKRm91ciBwaGFzZXMsIGVhY2ggaXRzIG93biBnYXRlLCBhbHdheXMgcnVuIGluIHRoaXMgb3JkZXI6Cgp8IFBoYXNlIHwgU2NyaXB0IHwgRG9lcyB8IFJlZnVzZXMgdG8gY29udGludWUgaWYgfAp8LS0tfC0tLXwtLS18LS0tfAp8IDEuIFB1bGwgfCBgc3JjL3B1bGwucHlgIHwgRGlzY292ZXJzICsgY2F0ZWdvcml6ZXMgaW50byBgcm93cy5qc29uYCB8IGEgdmlkZW8gbGFuZHMgaW4gdHdvIGJ1Y2tldHMsIGEgcm93IGZhbGxzIG91dHNpZGUgdGhlIHdpbmRvdywgYSBjYXRlZ29yeSBpbnZhcmlhbnQgYnJlYWtzLCBvciBhIGZldGNoZWQgdmlkZW8gaXMgbmVpdGhlciBwbGFjZWQgbm9yIHJlY29yZGVkIGFzIGV4Y2x1ZGVkIHwKfCAyLiBWZXJpZnkgfCBgc3JjL3ZlcmlmeS5weWAgfCBSZS1kZXJpdmVzIGV2ZXJ5IGRhdGUvZHVyYXRpb24vY2F0ZWdvcnkgb24gYSAqKnNlcGFyYXRlIGNvZGUgcGF0aCoqLCB3aXRoIGl0cyBvd24gZnJlc2ggeXQtZGxwIGZldGNoZXMsIGFuZCBpbmRlcGVuZGVudGx5IHJlLXdhbGtzIHRoZSBjaGFubmVsIHRhYnMgZm9yIGFueXRoaW5nIG1pc3NlZCB8IG5ldmVyIGJsb2NrcyB0aGUgbmV4dCBwaGFzZSBpdHNlbGYg4oCUIGl0IGp1c3QgcmVmdXNlcyB0byBzYXkgUEFTUyB8CnwgMy4gRm9ybWF0IHwgYHNyYy9mb3JtYXRfbWFzdGVyLnB5YCB8IEJ1aWxkcyB0aGUgcGFzdGUtcmVhZHkgYC50c3ZgIGJsb2NrcyB8IGB2ZXJpZnlfcmVwb3J0Lmpzb25gIGlzbid0IHByZXNlbnQgb3IgZG9lc24ndCBzYXkgYG92ZXJhbGw6IFBBU1NgIHwKfCA0LiBRQSBub3RlIHwgYHNyYy9xYV9ub3RlLnB5YCB8IEJ1aWxkcyB0aGUgcGxhaW4tbGFuZ3VhZ2Ugbm90ZSBmcm9tIHdoYXQncyBhbHJlYWR5IG9uIGRpc2sgfCAocmVhZHMgb25seTsgbm90aGluZyB0byBnYXRlKSB8CgojIyBUaGUgcnVsZXMgaXQgZW5jb2RlcwoKVGhlc2UgY2FtZSBvdXQgb2YgcmVhbCBjbGFzc2lmaWNhdGlvbiBtaXN0YWtlcywgYW5kIGFyZSBlbmZvcmNlZCBpbiBjb2RlLCBub3QKanVzdCBkb2N1bWVudGVkOgoKLSAqKkEgbGl2ZXN0cmVhbSBpcyBkYXRlZCBieSB3aGVuIGl0IHdlbnQgbGl2ZSoqLCBub3Qgd2hlbiBpdCB3YXMgcHVibGlzaGVkLgogIEEgbGl2ZSdzIHB1Ymxpc2ggdGltZSBpcyBvZnRlbiBhIHBsYWNlaG9sZGVyIHBvc3RlZCBob3VycyBvciBkYXlzIGVhcmxpZXIg4oCUCiAgZGF0aW5nIGJ5IGl0IGNhbiBwdXQgYSBUaHVyc2RheSBsaXZlc3RyZWFtIG9uIFdlZG5lc2RheSdzIHJvdy4KLSAqKlNob3J0cyBhbmQgbG9uZy1mb3JtIGFyZSBkYXRlZCBieSBwdWJsaXNoIHRpbWUuKioKLSAqKkEgcHJlbWllcmUgaXMgbm90IGEgbGl2ZXN0cmVhbS4qKiBZb3VUdWJlJ3Mgb3duIGBpc0xpdmVDb250ZW50YCBmbGFnCiAgZGVjaWRlcywgbmV2ZXIgYSBndWVzcyBmcm9tIHRpbWluZy4KLSAqKkR1cmF0aW9uIGlzIGFsd2F5cyByb3VuZGVkIHVwKiogdG8gdGhlIG5leHQgd2hvbGUgbWludXRlLgotICoqTm90LXlldC1haXJlZCBhbmQgc3RpbGwtYWlyaW5nIHZpZGVvcyBhcmUgZXhjbHVkZWQgYW5kIHF1ZXVlZCBmb3IgYQogIHJlLXB1bGwqKiDigJQgbmV2ZXIgd3JpdHRlbiB3aXRoIGEgcGxhY2Vob2xkZXIgZGF0ZSBvciBhIDAtbWludXRlIGR1cmF0aW9uLgotICoqQSB2aWRlbyB3aG9zZSBwYWdlIGZhaWxzIHRvIGxvYWQgaXMgcmV0cmllZCBvbmNlKiosIHRoZW4gcmVjb3JkZWQgYXMgYQogIGBmZXRjaC1mYWlsZWRgIGV4Y2x1c2lvbi4gSXQgaXMgbmV2ZXIgc2lsZW50bHkgZHJvcHBlZDsgZXZlcnkgZmV0Y2ggbG9vcCdzCiAgY292ZXJhZ2UgaXMgY2hlY2tlZCB0byBiYWxhbmNlIChgcmVxdWVzdGVkID09IHBsYWNlZCArIGV4Y2x1ZGVkYCkuCi0gKipNYXJhdGhvbiBsaXZlc3RyZWFtcyoqIChjb25maWd1cmFibGUgbGVuZ3RoLCBvciAibWFyYXRob24iIGluIHRoZSB0aXRsZSkKICBzcGxpdCBpbnRvIG9uZSByb3cgcGVyIGZhY3VsdHkgbmFtZWQgaW4gdGhlIHRpdGxlLCBtaW51dGVzIGRpdmlkZWQgZXZlbmx5LgogIElmIHRoZSB0aXRsZSBuYW1lcyBub2JvZHksIHRoZSByb3cgc3RheXMgd2hvbGUgYW5kIGlzIGZsYWdnZWQgZm9yIGEgaHVtYW4uCi0gKipXaGVuIG5vIHJvc3RlciBuYW1lIGNhbiBiZSBpZGVudGlmaWVkIGluIGEgdGl0bGUqKiwgdGhlIGZhY3VsdHkgY2VsbCBnZXRzCiAgYSBjb25maWd1cmVkIHBsYWNlaG9sZGVyIOKAlCBuZXZlciBibGFuaywgbmV2ZXIgYSBndWVzcy4KLSAqKkEgc2Vjb25kIGNoYW5uZWwncyBsaXZlc3RyZWFtIGlzIG9ubHkgZHJvcHBlZCBhcyBhIGR1cGxpY2F0ZSoqIG9mIGEKICBwcmltYXJ5IGNoYW5uZWwncyByb3cgd2hlbiBpdCBzaGFyZXMgdGhlIHNhbWUgZGF0ZSAqYW5kKiB0aGUgc2FtZQogIGBTZXNzaW9uIE5gIG51bWJlci4gRXZlcnkgZHJvcCBpcyB3cml0dGVuIHRvIGEgbGVkZ2VyLCBub3RoaW5nIGRpc2FwcGVhcnMKICBzaWxlbnRseS4KCiMjIFF1aWNrc3RhcnQKCmBgYGJhc2gKZ2l0IGNsb25lIGh0dHBzOi8vZ2l0aHViLmNvbS9zdngyMDI3L3l0LW1hc3RlcnNoZWV0LWtpdC5naXQKY2QgeXQtbWFzdGVyc2hlZXQta2l0CnB5dGhvbjMgLW0gdmVudiAudmVudiAmJiBzb3VyY2UgLnZlbnYvYmluL2FjdGl2YXRlCnBpcCBpbnN0YWxsIC1yIHJlcXVpcmVtZW50cy50eHQKCiMgVGhlIHJlcG8gc2hpcHMgYSBmdWxseSBmaWN0aW9uYWwgZGVtbyB2ZXJ0aWNhbCBzbyB5b3UgY2FuIHNlZSB0aGUgc2hhcGUgb2YKIyBhIHJlYWwgcnVuIGJlZm9yZSBwb2ludGluZyBpdCBhdCB5b3VyIG93biBjaGFubmVsLgpjcCBjb25maWcvdmVydGljYWwuZXhhbXBsZS55YW1sIGNvbmZpZy92ZXJ0aWNhbC55YW1sCmNwIGlucHV0cy9mYWN1bHRpZXMuZXhhbXBsZS5jc3YgaW5wdXRzL2ZhY3VsdGllcy5jc3YKY3AgaW5wdXRzL2FsaWFzZXMuZXhhbXBsZS5jc3YgaW5wdXRzL2FsaWFzZXMuY3N2CmNwIGlucHV0cy9mYWN1bHR5X2VtYWlscy5leGFtcGxlLmNzdiBpbnB1dHMvZmFjdWx0eV9lbWFpbHMuY3N2CmNwIGlucHV0cy9zdWJqZWN0cy5leGFtcGxlLnlhbWwgaW5wdXRzL3N1YmplY3RzLnlhbWwKCnB5dGhvbiAtbSBzcmMucHVsbCAgICAgICAgICAtLXN0YXJ0IDIwMjYtMDctMDEgLS1lbmQgMjAyNi0wNy0wNwpweXRob24gLW0gc3JjLnZlcmlmeSAgICAgICAgLS1zdGFydCAyMDI2LTA3LTAxIC0tZW5kIDIwMjYtMDctMDcKcHl0aG9uIC1tIHNyYy5mb3JtYXRfbWFzdGVyIC0tc3RhcnQgMjAyNi0wNy0wMSAtLWVuZCAyMDI2LTA3LTA3CnB5dGhvbiAtbSBzcmMucWFfbm90ZSAgICAgICAtLXN0YXJ0IDIwMjYtMDctMDEgLS1lbmQgMjAyNi0wNy0wNwpgYGAKCkVhY2ggcGhhc2UgcHJpbnRzIGl0cyBvd24gc3VtbWFyeSBhbmQgbmFtZXMgdGhlIG5leHQgY29tbWFuZCB0byBydW4uIE91dHB1dApmb3IgdGhlIHdpbmRvdyBsYW5kcyBpbiBgb3V0cHV0LzIwMjYtMDctMDFfdG9fMjAyNi0wNy0wNy9gOiBgcm93cy5qc29uYCAodGhlCmNhbm9uaWNhbCBkYXRhKSwgYW4gb3B0aW9uYWwgaHVtYW4tcmVhZGFibGUgYC54bHN4YCB2aWV3IG9mIHRoZSBzYW1lIHJvd3MsCmB2ZXJpZnlfcmVwb3J0Lmpzb25gLCB0aGUgcGFzdGUtcmVhZHkgYmxvY2tzIHVuZGVyIGBibG9ja3MvYCwgYW5kIGBxYV9ub3RlLnR4dGAuCgpUbyBwb2ludCB0aGUga2l0IGF0IHlvdXIgb3duIGNoYW5uZWw6IGVkaXQgYGNvbmZpZy92ZXJ0aWNhbC55YW1sYCAoY2hhbm5lbApoYW5kbGUsIGNhdGVnb3JpemF0aW9uIHRocmVzaG9sZHMsIGV4cGVjdGVkIHdlZWtseSBjYWRlbmNlKSBhbmQgdGhlIGZvdXIgZmlsZXMKaW4gYGlucHV0cy9gICh5b3VyIHJvc3RlciwgYWxpYXMgc3BlbGxpbmdzLCBzdWJqZWN0IGtleXdvcmQgcnVsZXMpLiBOb3RoaW5nIGluCmBzcmMvYCBuZWVkcyB0byBjaGFuZ2Ug4oCUIHRoYXQgaXMgdGhlIHdob2xlIHBvaW50IG9mIGtlZXBpbmcgY29uZmlnIGFuZCBlbmdpbmUKc2VwYXJhdGUuCgpJZiB5b3UgdXNlIFtDbGF1ZGUgQ29kZV0oaHR0cHM6Ly9jbGF1ZGUuY29tL2NsYXVkZS1jb2RlKSwgYC5jbGF1ZGUvY29tbWFuZHMvYApzaGlwcyBgL3l0LXNldHVwYCAoYSBndWlkZWQgaW50ZXJ2aWV3IHRoYXQgd3JpdGVzIHlvdXIgY29uZmlnIGZvciB5b3UpIGFuZApgL3l0LW1hc3RlcnNoZWV0IFNUQVJUIEVORGAgKHJ1bnMgYWxsIGZvdXIgcGhhc2VzIGFuZCBwYXN0ZXMgdGhlIHJlc3VsdCBpbnRvCmNoYXQpLgoKIyMgVmVyaWZpY2F0aW9uIHN0b3J5CgpOb3RoaW5nIGlzIGhhbmRlZCBvdmVyIG9uIHRoZSBzdHJlbmd0aCBvZiBvbmUgcGFzcy4gYHZlcmlmeS5weWAgZGVsaWJlcmF0ZWx5CmRvZXMgKipub3QqKiBpbXBvcnQgYHNyYy9jYXRlZ29yaXplLnB5YCDigJQgaXQgcmUtaW1wbGVtZW50cyB0aGUgc2FtZSBkYXRpbmcsCmR1cmF0aW9uLCBhbmQgY2F0ZWdvcml6YXRpb24gcnVsZXMgZnJvbSBzY3JhdGNoLCB3aXRoIGl0cyBvd24gSVNUIGNvbnZlcnNpb24sCml0cyBvd24gcm91bmRpbmcsIGFuZCBpdHMgb3duIGZyZXNoIHl0LWRscCBmZXRjaGVzLiBXaGVuIHRoZSB0d28gaW5kZXBlbmRlbnRseQp3cml0dGVuIGltcGxlbWVudGF0aW9ucyBhZ3JlZSwgdGhhdCBpcyByZWFsIGV2aWRlbmNlIHRoZSBsb2dpYyBpcyByaWdodDsgaWYKYHZlcmlmeS5weWAgcmV1c2VkIGBwdWxsLnB5YCdzIGZ1bmN0aW9ucywgYWdyZWVtZW50IHdvdWxkIG9ubHkgcHJvdmUgYQpmdW5jdGlvbiB3YXMgY2FsbGVkIHR3aWNlLgoKYHZlcmlmeS5weWAgY2hlY2tzIHRocmVlIHRoaW5ncyBhbmQgd3JpdGVzIGB2ZXJpZnlfcmVwb3J0Lmpzb25gOgoKMS4gKipSZS1kZXJpdmF0aW9uKiog4oCUIGV2ZXJ5IHBsYWNlZCB2aWRlbydzIGRhdGUsIGR1cmF0aW9uLCBhbmQgY2F0ZWdvcnksCiAgIHJlY29tcHV0ZWQgZnJvbSBhIGZyZXNoIGZldGNoLCBtdXN0IG1hdGNoIHdoYXQgYHB1bGwucHlgIHdyb3RlLgoyLiAqKk5vIGNyb3NzLWJ1Y2tldCBkdXBsaWNhdGVzKiog4oCUIG5vIHZpZGVvIGlkIG1heSBhcHBlYXIgaW4gdHdvIGJ1Y2tldHMuCjMuICoqQW4gaW5kZXBlbmRlbnQsIGRlZXBlciByZS13YWxrKiogb2YgZXZlcnkgY2hhbm5lbCB0YWIgKGZ1cnRoZXIgYmFjayB0aGFuCiAgIHRoZSBwdWxsJ3Mgb3duIGxvb2tiYWNrKSBjb25maXJtcyBub3RoaW5nIGluIHRoZSB3aW5kb3cgd2FzIG1pc3NlZC4KCmBmb3JtYXRfbWFzdGVyLnB5YCByZWFkcyBgdmVyaWZ5X3JlcG9ydC5qc29uYCBiZWZvcmUgZG9pbmcgYW55dGhpbmcgZWxzZSBhbmQKaGFsdHMgaW1tZWRpYXRlbHkgaWYgaXQgaXMgbWlzc2luZyBvciBzYXlzIGFueXRoaW5nIG90aGVyIHRoYW4gYFBBU1NgLiBUaGF0CmNoZWNrIGlzIGEgZmV3IGxpbmVzIG9mIGNvZGUsIG5vdCBhIHBvbGljeSBzb21lb25lIGhhcyB0byByZW1lbWJlciB0byBydW4uCgojIyBUZXN0cwoKYGBgYmFzaAoudmVudi9iaW4vcHl0aG9uIC1tIHVuaXR0ZXN0IGRpc2NvdmVyIC1zIHRlc3RzIC12CmBgYAoKMzMgcHVyZS1mdW5jdGlvbiB0ZXN0cywgbm8gbmV0d29yayBjYWxscy4gVGhleSBwaW4gdGhlIGNhdGVnb3JpemF0aW9uIHJ1bGVzCmFib3ZlIOKAlCBpbmNsdWRpbmcgdGhlIElTVC1taWRuaWdodCBib3VuZGFyeSwgd2hlcmUgYSBvbmUtc2Vjb25kIGRpZmZlcmVuY2UgaW4KYWJzb2x1dGUgdGltZSBtdXN0IGZsaXAgd2hpY2ggY2FsZW5kYXIgZGF5IGEgdmlkZW8gaXMgZGF0ZWQgb24g4oCUIGFuZApzcGVjaWZpY2FsbHkgY3Jvc3MtY2hlY2sgdGhhdCBgcHVsbC5weWAncyBhbmQgYHZlcmlmeS5weWAncyBpbmRlcGVuZGVudGx5CndyaXR0ZW4gY2F0ZWdvcml6ZSBmdW5jdGlvbnMgYWdyZWUgYXQgdGhhdCBleGFjdCBib3VuZGFyeSwgbm90IGp1c3Qgb24Kb3JkaW5hcnkgbWlkLWRheSB0aW1lc3RhbXBzLgoKIyMgSG9uZXN0IGxpbWl0cwoKLSB5dC1kbHAgb25seTogbm8gWW91VHViZSBEYXRhIEFQSSBrZXkgb3IgcXVvdGEsIGJ1dCB0aGF0IGFsc28gbWVhbnMgaXQgaXMKICBleHBvc2VkIHRvIHdoYXRldmVyIHBhZ2Utc3RydWN0dXJlIGNoYW5nZXMgWW91VHViZSBtYWtlcyBvdmVyIHRpbWUuCi0gRGF0ZXMgb25seSBpbiBBc2lhL0tvbGthdGEgKElTVCkgdG9kYXkuIFRoZSB0aW1lem9uZSBoYW5kbGluZyBpcyBhIGZpeGVkClVUQys1OjMwIG9mZnNldCwgbm90IGEgZ2VuZXJhbCB6b25laW5mbyBsb29rdXAuCi0gTm8gdGh1bWJuYWlsIG9yIHZpc2lvbiBzdGVwOiBtYXJhdGhvbiBmYWN1bHR5LXNwbGl0dGluZyByZWFkcyB0aGUgdGl0bGUgYW5kCiAgZGVzY3JpcHRpb24gb25seSwgYW5kIHNheXMgc28gaW4gdGhlIFFBIG5vdGUgd2hlbiBpdCBjYW4ndCByZXNvbHZlIG9uZS4KLSBObyB3ZWIgVUkuIEl0J3MgYSBDTEkgeW91IHJ1biBieSBoYW5kLCBmcm9tIGEgc2NoZWR1bGVyLCBvciBmcm9tIENsYXVkZSBDb2RlLgoKIyMgTGF5b3V0CgpgYGAKY29uZmlnLyAgICB2ZXJ0aWNhbC5leGFtcGxlLnlhbWwgLS0gdGhlIG9uZSBmaWxlIHRoYXQgbWFrZXMgYSBydW4geW91cnMKaW5wdXRzLyAgICBmYWN1bHRpZXMgLyBhbGlhc2VzIC8gZmFjdWx0eV9lbWFpbHMgLyBzdWJqZWN0cyAoKi5leGFtcGxlIHZlcnNpb25zIHNoaXAgaW4gdGhlIHJlcG8pCnNyYy8gICAgICAgdGhlIHNoYXJlZCwgY2hhbm5lbC1hZ25vc3RpYyBlbmdpbmUgKGtpdGNvbmZpZywgeXRkbHBfY2xpZW50LCBjYXRlZ29yaXplLAogICAgICAgICAgIGZhY3VsdHksIHB1bGwsIHZlcmlmeSwgZm9ybWF0X21hc3RlciwgcWFfbm90ZSkKdGVzdHMvICAgICAzMyBwdXJlLWZ1bmN0aW9uIHRlc3RzLCBubyBuZXR3b3JrCi5jbGF1ZGUvICAgb3B0aW9uYWwgL3l0LXNldHVwIGFuZCAveXQtbWFzdGVyc2hlZXQgc2xhc2ggY29tbWFuZHMgKyBza2lsbCwgZm9yIENsYXVkZSBDb2RlIHVzZXJzCmBgYAo=
+# yt-mastersheet-kit
+
+A config-driven YouTube channel tracker. Point it at a channel, get paste-ready
+master-tracker rows plus a plain-language QA note, and nothing is handed over
+until a second, independently written pass of the pipeline agrees with the first.
+
+Runs entirely on [yt-dlp](https://github.com/yt-dlp/yt-dlp): no YouTube Data API
+key, no quota to manage.
+
+## What it does
+
+For a date range, the kit:
+
+1. Discovers every video a channel published in that window, straight from the
+   channel's own `/videos`, `/shorts`, and `/streams` tabs (never a keyword
+   search, which is a lossy index of what a channel actually published).
+2. Classifies each one into **Live**, **Long-form**, or **Shorts**, dates it
+   correctly, and rounds its duration.
+3. Independently re-derives every one of those decisions on a second code path,
+   with fresh fetches, before anything downstream is allowed to run.
+4. Builds tab-separated blocks in the exact column layout a shared tracker
+   sheet expects, ready to paste in.
+5. Writes an executive QA note: a short, plain-English list of anything a human
+   should double-check on YouTube (possible misses, videos that hadn't aired
+   yet, rows where no individual could be attributed).
+
+A non-technical operator only ever touches one YAML file and a handful of CSVs
+in `inputs/`. The pipeline in `src/` is config-driven and never needs editing
+per channel.
+
+## Architecture
+
+```mermaid
+flowchart TD
+    CFG["config/vertical.yaml\n+ inputs/*.csv"] --> PULL
+    YT[("YouTube\nvideos / shorts / streams tabs")] -->|yt-dlp fetch| PULL(("pull.py\ndiscover + categorize"))
+    PULL --> ROWS["rows.json\ncanonical rows"]
+    ROWS --> VERIFY(("verify.py\nindependent re-derivation"))
+    YT -->|second, fresh fetch| VERIFY
+    VERIFY --> REPORT{"verify_report.json\nPASS or FAIL"}
+    REPORT -- "PASS only" --> FORMAT(("format_master.py\nbuild tracker blocks"))
+    REPORT -- FAIL --> HALT["run halts\nnothing is written"]
+    FORMAT --> BLOCKS["blocks/*.tsv\npaste-ready"]
+    FORMAT --> QA(("qa_note.py"))
+    QA --> NOTE["qa_note.txt"]
+```
+
+Four phases, each its own gate, always run in this order:
+
+| Phase | Script | Does | Refuses to continue if |
+|---|---|---|---|
+| 1. Pull | `src/pull.py` | Discovers + categorizes into `rows.json` | a video lands in two buckets, a row falls outside the window, a category invariant breaks, or a fetched video is neither placed nor recorded as excluded |
+| 2. Verify | `src/verify.py` | Re-derives every date/duration/category on a **separate code path**, with its own fresh yt-dlp fetches, and independently re-walks the channel tabs for anything missed | never blocks the next phase itself — it just refuses to say PASS |
+| 3. Format | `src/format_master.py` | Builds the paste-ready `.tsv` blocks | `verify_report.json` isn't present or doesn't say `overall: PASS` |
+| 4. QA note | `src/qa_note.py` | Builds the plain-language note from what's already on disk | (reads only; nothing to gate) |
+
+## The rules it encodes
+
+These came out of real classification mistakes, and are enforced in code, not
+just documented:
+
+- **A livestream is dated by when it went live**, not when it was published.
+  A live's publish time is often a placeholder posted hours or days earlier —
+  dating by it can put a Thursday livestream on Wednesday's row.
+- **Shorts and long-form are dated by publish time.**
+- **A premiere is not a livestream.** YouTube's own `isLiveContent` flag
+  decides, never a guess from timing.
+- **Duration is always rounded up** to the next whole minute.
+- **Not-yet-aired and still-airing videos are excluded and queued for a
+  re-pull** — never written with a placeholder date or a 0-minute duration.
+- **A video whose page fails to load is retried once**, then recorded as a
+  `fetch-failed` exclusion. It is never silently dropped; every fetch loop's
+  coverage is checked to balance (`requested == placed + excluded`).
+- **Marathon livestreams** (configurable length, or "marathon" in the title)
+  split into one row per faculty named in the title, minutes divided evenly.
+  If the title names nobody, the row stays whole and is flagged for a human.
+- **When no roster name can be identified in a title**, the faculty cell gets
+  a configured placeholder — never blank, never a guess.
+- **A second channel's livestream is only dropped as a duplicate** of a
+  primary channel's row when it shares the same date *and* the same
+  `Session N` number. Every drop is written to a ledger, nothing disappears
+  silently.
+
+## Quickstart
+
+```bash
+git clone https://github.com/svx2027/yt-mastersheet-kit.git
+cd yt-mastersheet-kit
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+
+# The repo ships a fully fictional demo vertical so you can see the shape of
+# a real run before pointing it at your own channel.
+cp config/vertical.example.yaml config/vertical.yaml
+cp inputs/faculties.example.csv inputs/faculties.csv
+cp inputs/aliases.example.csv inputs/aliases.csv
+cp inputs/faculty_emails.example.csv inputs/faculty_emails.csv
+cp inputs/subjects.example.yaml inputs/subjects.yaml
+
+python -m src.pull          --start 2026-07-01 --end 2026-07-07
+python -m src.verify        --start 2026-07-01 --end 2026-07-07
+python -m src.format_master --start 2026-07-01 --end 2026-07-07
+python -m src.qa_note       --start 2026-07-01 --end 2026-07-07
+```
+
+Each phase prints its own summary and names the next command to run. Output
+for the window lands in `output/2026-07-01_to_2026-07-07/`: `rows.json` (the
+canonical data), an optional human-readable `.xlsx` view of the same rows,
+`verify_report.json`, the paste-ready blocks under `blocks/`, and `qa_note.txt`.
+
+To point the kit at your own channel: edit `config/vertical.yaml` (channel
+handle, categorization thresholds, expected weekly cadence) and the four files
+in `inputs/` (your roster, alias spellings, subject keyword rules). Nothing in
+`src/` needs to change — that is the whole point of keeping config and engine
+separate.
+
+If you use [Claude Code](https://claude.com/claude-code), `.claude/commands/`
+ships `/yt-setup` (a guided interview that writes your config for you) and
+`/yt-mastersheet START END` (runs all four phases and pastes the result into
+chat).
+
+## Verification story
+
+Nothing is handed over on the strength of one pass. `verify.py` deliberately
+does **not** import `src/categorize.py` — it re-implements the same dating,
+duration, and categorization rules from scratch, with its own IST conversion,
+its own rounding, and its own fresh yt-dlp fetches. When the two independently
+written implementations agree, that is real evidence the logic is right; if
+`verify.py` reused `pull.py`'s functions, agreement would only prove a
+function was called twice.
+
+`verify.py` checks three things and writes `verify_report.json`:
+
+1. **Re-derivation** — every placed video's date, duration, and category,
+   recomputed from a fresh fetch, must match what `pull.py` wrote.
+2. **No cross-bucket duplicates** — no video id may appear in two buckets.
+3. **An independent, deeper re-walk** of every channel tab (further back than
+   the pull's own lookback) confirms nothing in the window was missed.
+
+`format_master.py` reads `verify_report.json` before doing anything else and
+halts immediately if it is missing or says anything other than `PASS`. That
+check is a few lines of code, not a policy someone has to remember to run.
+
+## Tests
+
+```bash
+.venv/bin/python -m unittest discover -s tests -v
+```
+
+33 pure-function tests, no network calls. They pin the categorization rules
+above — including the IST-midnight boundary, where a one-second difference in
+absolute time must flip which calendar day a video is dated on — and
+specifically cross-check that `pull.py`'s and `verify.py`'s independently
+written categorize functions agree at that exact boundary, not just on
+ordinary mid-day timestamps.
+
+## Honest limits
+
+- yt-dlp only: no YouTube Data API key or quota, but that also means it is
+  exposed to whatever page-structure changes YouTube makes over time.
+- Dates only in Asia/Kolkata (IST) today. The timezone handling is a fixed
+UTC+5:30 offset, not a general zoneinfo lookup.
+- No thumbnail or vision step: marathon faculty-splitting reads the title and
+  description only, and says so in the QA note when it can't resolve one.
+- No web UI. It's a CLI you run by hand, from a scheduler, or from Claude Code.
+
+## Layout
+
+```
+config/    vertical.example.yaml -- the one file that makes a run yours
+inputs/    faculties / aliases / faculty_emails / subjects (*.example versions ship in the repo)
+src/       the shared, channel-agnostic engine (kitconfig, ytdlp_client, categorize,
+           faculty, pull, verify, format_master, qa_note)
+tests/     33 pure-function tests, no network
+.claude/   optional /yt-setup and /yt-mastersheet slash commands + skill, for Claude Code users
+```
