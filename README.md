@@ -154,6 +154,12 @@ specifically cross-check that `pull.py`'s and `verify.py`'s independently
 written categorize functions agree at that exact boundary, not just on
 ordinary mid-day timestamps.
 
+## Case study
+
+A full write-up of the design decisions behind this pipeline is live:
+[Nothing gets pasted into the tracker until two passes agree](https://shivamvashisth.com/case-studies/verify-before-deliver/),
+part of a case-study series on [shivamvashisth.com](https://shivamvashisth.com).
+
 ## Honest limits
 
 - yt-dlp only: no YouTube Data API key or quota, but that also means it is
