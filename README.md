@@ -1,5 +1,7 @@
 # yt-mastersheet-kit
 
+[![tests](https://github.com/svx2027/yt-mastersheet-kit/actions/workflows/tests.yml/badge.svg)](https://github.com/svx2027/yt-mastersheet-kit/actions/workflows/tests.yml)
+
 A config-driven YouTube channel tracker. Point it at a channel, get paste-ready
 master-tracker rows plus a plain-language QA note, and nothing is handed over
 until a second, independently written pass of the pipeline agrees with the first.
@@ -152,7 +154,9 @@ above — including the IST-midnight boundary, where a one-second difference in
 absolute time must flip which calendar day a video is dated on — and
 specifically cross-check that `pull.py`'s and `verify.py`'s independently
 written categorize functions agree at that exact boundary, not just on
-ordinary mid-day timestamps.
+ordinary mid-day timestamps. `.github/workflows/tests.yml` runs the same
+suite on every push and pull request (Python 3.11, `pip install -r
+requirements.txt`) — no network calls, so it needs no secrets.
 
 ## Case study
 
