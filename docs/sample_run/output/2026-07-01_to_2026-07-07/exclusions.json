@@ -1,0 +1,37 @@
+[
+  {
+    "video_id": "live005",
+    "title": "(fetch failed)",
+    "url": "https://www.youtube.com/watch?v=live005",
+    "channel": "Main",
+    "reason": "fetch-failed",
+    "date_str": null,
+    "live_status": "NA",
+    "was_live": null,
+    "flags": [
+      "fetch-failed"
+    ]
+  },
+  {
+    "video_id": "gap001",
+    "title": "Bonus Explainer Clip",
+    "url": "https://www.youtube.com/watch?v=gap001",
+    "channel": "Main",
+    "reason": "gap-181-299s",
+    "date_str": null,
+    "live_status": "not_live",
+    "was_live": false,
+    "flags": []
+  },
+  {
+    "video_id": "live004",
+    "title": "Upcoming: Geometry Marathon (Scheduled)",
+    "url": "https://www.youtube.com/watch?v=live004",
+    "channel": "Main",
+    "reason": "unaired",
+    "date_str": null,
+    "live_status": "is_upcoming",
+    "was_live": true,
+    "flags": []
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "version": "v1",
+  "window": {
+    "start": "2026-07-01",
+    "end": "2026-07-07",
+    "tz": "Asia/Kolkata",
+    "days": 7
+  },
+  "vertical": "MATH",
+  "fetched": 14,
+  "excluded": 3,
+  "counts": {
+    "Live_Main": 4,
+    "LF_Main": 5,
+    "Shorts_Main": 3
+  },
+  "warnings": [],
+  "gate": "PASS"
+}

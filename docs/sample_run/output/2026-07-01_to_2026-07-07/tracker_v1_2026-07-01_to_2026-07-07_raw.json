@@ -1,0 +1,221 @@
+{
+  "version": "v1",
+  "vertical": "MATH",
+  "display_name": "Demo MATH Prep",
+  "window": {
+    "start": "2026-07-01",
+    "end": "2026-07-07",
+    "tz": "Asia/Kolkata",
+    "days": 7
+  },
+  "channels": [
+    {
+      "label": "Main",
+      "handle": "@MathPrepDemo",
+      "language": "main",
+      "is_primary": true
+    }
+  ],
+  "buckets": {
+    "Live_Main": [
+      {
+        "video_id": "live001",
+        "title": "Algebra Live Class | Meera Iyer Ma'am",
+        "url": "https://www.youtube.com/watch?v=live001",
+        "date_str": "01-Jul-2026",
+        "ist_iso": "2026-07-01T18:00:00+05:30",
+        "duration_min": 60,
+        "live_status": "was_live",
+        "was_live": true,
+        "source_tab": "streams",
+        "channel_label": "Main",
+        "language": "main",
+        "is_marathon": false,
+        "faculty": null,
+        "flags": []
+      },
+      {
+        "video_id": "live002",
+        "title": "Weekly Full Day Marathon: Arjun Rao Sir and Devika Menon",
+        "url": "https://www.youtube.com/watch?v=live002",
+        "date_str": "03-Jul-2026",
+        "ist_iso": "2026-07-03T09:00:00+05:30",
+        "duration_min": 120,
+        "live_status": "was_live",
+        "was_live": true,
+        "source_tab": "streams",
+        "channel_label": "Main",
+        "language": "main",
+        "is_marathon": true,
+        "faculty": "Arjun Rao Sir",
+        "flags": []
+      },
+      {
+        "video_id": "live002",
+        "title": "Weekly Full Day Marathon: Arjun Rao Sir and Devika Menon",
+        "url": "https://www.youtube.com/watch?v=live002",
+        "date_str": "03-Jul-2026",
+        "ist_iso": "2026-07-03T09:00:00+05:30",
+        "duration_min": 120,
+        "live_status": "was_live",
+        "was_live": true,
+        "source_tab": "streams",
+        "channel_label": "Main",
+        "language": "main",
+        "is_marathon": true,
+        "faculty": "Devika Menon",
+        "flags": []
+      },
+      {
+        "video_id": "live003",
+        "title": "Doubt Clearing Session",
+        "url": "https://www.youtube.com/watch?v=live003",
+        "date_str": "05-Jul-2026",
+        "ist_iso": "2026-07-05T16:00:00+05:30",
+        "duration_min": 50,
+        "live_status": "was_live",
+        "was_live": true,
+        "source_tab": "streams",
+        "channel_label": "Main",
+        "language": "main",
+        "is_marathon": false,
+        "faculty": null,
+        "flags": []
+      }
+    ],
+    "LF_Main": [
+      {
+        "video_id": "lf001",
+        "title": "Coordinate Geometry Full Chapter | Arjun Rao Sir",
+        "url": "https://www.youtube.com/watch?v=lf001",
+        "date_str": "02-Jul-2026",
+        "ist_iso": "2026-07-02T11:00:00+05:30",
+        "duration_min": 30,
+        "live_status": "not_live",
+        "was_live": false,
+        "source_tab": "videos",
+        "channel_label": "Main",
+        "language": "main",
+        "is_marathon": false,
+        "faculty": null,
+        "flags": []
+      },
+      {
+        "video_id": "lf002",
+        "title": "HCF and LCM Tricks | Devika Menon",
+        "url": "https://www.youtube.com/watch?v=lf002",
+        "date_str": "04-Jul-2026",
+        "ist_iso": "2026-07-04T09:00:00+05:30",
+        "duration_min": 15,
+        "live_status": "not_live",
+        "was_live": false,
+        "source_tab": "videos",
+        "channel_label": "Main",
+        "language": "main",
+        "is_marathon": false,
+        "faculty": null,
+        "flags": []
+      },
+      {
+        "video_id": "lf004",
+        "title": "Fun Friday Quiz Round 12",
+        "url": "https://www.youtube.com/watch?v=lf004",
+        "date_str": "07-Jul-2026",
+        "ist_iso": "2026-07-07T08:00:00+05:30",
+        "duration_min": 10,
+        "live_status": "not_live",
+        "was_live": false,
+        "source_tab": "videos",
+        "channel_label": "Main",
+        "language": "main",
+        "is_marathon": false,
+        "faculty": null,
+        "flags": []
+      },
+      {
+        "video_id": "lf005",
+        "title": "Combined Revision: Arjun Rao Sir and Devika Menon",
+        "url": "https://www.youtube.com/watch?v=lf005",
+        "date_str": "06-Jul-2026",
+        "ist_iso": "2026-07-06T14:00:00+05:30",
+        "duration_min": 20,
+        "live_status": "not_live",
+        "was_live": false,
+        "source_tab": "videos",
+        "channel_label": "Main",
+        "language": "main",
+        "is_marathon": false,
+        "faculty": null,
+        "flags": []
+      },
+      {
+        "video_id": "lf003",
+        "title": "Full Mock Test Premiere: Time and Work",
+        "url": "https://www.youtube.com/watch?v=lf003",
+        "date_str": "06-Jul-2026",
+        "ist_iso": "2026-07-06T19:00:00+05:30",
+        "duration_min": 45,
+        "live_status": "not_live",
+        "was_live": false,
+        "source_tab": "streams",
+        "channel_label": "Main",
+        "language": "main",
+        "is_marathon": false,
+        "faculty": null,
+        "flags": [
+          "premiere-from-streams-tab"
+        ]
+      }
+    ],
+    "Shorts_Main": [
+      {
+        "video_id": "sh001",
+        "title": "Quick Trick: Percentages in 30 Seconds | Meera Iyer Ma'am",
+        "url": "https://www.youtube.com/watch?v=sh001",
+        "date_str": "01-Jul-2026",
+        "ist_iso": "2026-07-01T07:00:00+05:30",
+        "duration_min": null,
+        "live_status": "not_live",
+        "was_live": false,
+        "source_tab": "shorts",
+        "channel_label": "Main",
+        "language": "main",
+        "is_marathon": false,
+        "faculty": null,
+        "flags": []
+      },
+      {
+        "video_id": "sh002",
+        "title": "Common Mistake in Probability | Arjun Rao Sir",
+        "url": "https://www.youtube.com/watch?v=sh002",
+        "date_str": "03-Jul-2026",
+        "ist_iso": "2026-07-03T07:30:00+05:30",
+        "duration_min": null,
+        "live_status": "not_live",
+        "was_live": false,
+        "source_tab": "shorts",
+        "channel_label": "Main",
+        "language": "main",
+        "is_marathon": false,
+        "faculty": null,
+        "flags": []
+      },
+      {
+        "video_id": "sh003",
+        "title": "Orientation Session Walkthrough",
+        "url": "https://www.youtube.com/watch?v=sh003",
+        "date_str": "05-Jul-2026",
+        "ist_iso": "2026-07-05T08:00:00+05:30",
+        "duration_min": null,
+        "live_status": "not_live",
+        "was_live": false,
+        "source_tab": "shorts",
+        "channel_label": "Main",
+        "language": "main",
+        "is_marathon": false,
+        "faculty": null,
+        "flags": []
+      }
+    ]
+  }
+}

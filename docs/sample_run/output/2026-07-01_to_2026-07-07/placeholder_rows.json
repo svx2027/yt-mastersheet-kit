@@ -1,0 +1,30 @@
+[
+  {
+    "date_str": "05-Jul-2026",
+    "channel": "Main",
+    "type": "Live",
+    "title": "Doubt Clearing Session",
+    "url": "https://www.youtube.com/watch?v=live003"
+  },
+  {
+    "date_str": "07-Jul-2026",
+    "channel": "Main",
+    "type": "Long-form",
+    "title": "Fun Friday Quiz Round 12",
+    "url": "https://www.youtube.com/watch?v=lf004"
+  },
+  {
+    "date_str": "06-Jul-2026",
+    "channel": "Main",
+    "type": "Long-form",
+    "title": "Full Mock Test Premiere: Time and Work",
+    "url": "https://www.youtube.com/watch?v=lf003"
+  },
+  {
+    "date_str": "05-Jul-2026",
+    "channel": "Main",
+    "type": "Short",
+    "title": "Orientation Session Walkthrough",
+    "url": "https://www.youtube.com/watch?v=sh003"
+  }
+]
