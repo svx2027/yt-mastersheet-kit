@@ -121,6 +121,46 @@ ships `/yt-setup` (a guided interview that writes your config for you) and
 `/yt-mastersheet START END` (runs all four phases and pastes the result into
 chat).
 
+## Sample run
+
+Don't want to run anything yet? [`docs/sample_run/`](docs/sample_run/) has a
+full four-phase run committed, so you can read the actual output shape first.
+
+It's not a live pull — the sandbox this repo's automation runs in has no
+outbound network access to youtube.com — but it's not hand-written either.
+It's the real, unmodified `src/pull.py` → `verify.py` → `format_master.py` →
+`qa_note.py` run against a small (14-video), openly synthetic catalog for the
+same fictional `Demo MATH Prep` vertical the Quickstart above uses, through a
+stand-in for `yt-dlp` that answers from a local catalog file instead of the
+network. The 14 videos were built to exercise the kit's edge cases in one
+window, not just the easy path:
+
+- A live dated by its air time, not its later placeholder-publish time.
+- A 240-minute marathon split 120/120 across the two faculty named in its
+  title.
+- Four separate no-individual-faculty cases (a live, a quiz, a premiere, a
+  Short) all landing on the `Channel Official` placeholder, never a guess.
+- A non-marathon video naming two faculty, tagged `NEEDS-MANUAL-SPLIT`
+  instead of picking one.
+- A premiere discovered on the `/streams` tab but correctly kept out of
+  Live because `was_live=False`.
+- One not-yet-aired video and one simulated fetch failure, both excluded and
+  queued for a re-pull, never silently dropped or faked.
+
+The committed `verify_report.json` is a genuine independent re-derivation —
+`verify.py`'s own separate re-fetch and re-walk through the same stand-in —
+not a copy of `pull.py`'s output, and it says `PASS`. The window nets 12
+placed rows (4 live, 5 long-form, 3 shorts) out of 14 fetched, 3 excluded (the
+unaired video, the fetch failure, and one caught by the 181-299s gap rule) —
+the marathon split turns 1 fetched video into 2 rows, which is why placed
+rows outnumber fetched-minus-excluded. The resulting `qa_note.txt` lists 6
+items for a human to check: 2 videos to verify and 4 unnamed-faculty rows —
+read it alongside `blocks/*.tsv` to see exactly what a delivered window looks
+like before running the kit yourself.
+
+See [`docs/sample_run/README.md`](docs/sample_run/README.md) for how to
+reproduce it locally.
+
 ## Verification story
 
 Nothing is handed over on the strength of one pass. `verify.py` deliberately
