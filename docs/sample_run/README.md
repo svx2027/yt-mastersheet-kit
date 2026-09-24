@@ -56,6 +56,47 @@ is not a trivial all-clear:
   every placed id (through the same stand-in) and re-walking every channel
   tab -- it is not a copy of `pull.py`'s output.
 
+## The QA note itself
+
+The exact text `qa_note.py` wrote for this window, so the delivered shape is
+visible without opening `output/2026-07-01_to_2026-07-07/qa_note.txt`
+yourself:
+
+```
+QA NOTE -- Demo MATH Prep -- 2026-07-01 to 2026-07-07
+6 item(s) need a human to check on YouTube (2 possibly missing or uncertain, 4 unnamed faculty).
+
+A) VIDEOS TO VERIFY (possibly missing, not yet aired, or uncertain)
+1. (not yet dated) | Main | (fetch failed)
+   Why: its YouTube page could not be read this run (network/throttle) -- re-pull to capture it
+   Link: https://www.youtube.com/watch?v=live005
+2. (not yet dated) | Main | Upcoming: Geometry Marathon (Scheduled)
+   Why: not yet aired -- re-pull this window once it airs
+   Link: https://www.youtube.com/watch?v=live004
+
+B) ROWS TAGGED "Channel Official" (no individual faculty could be identified)
+Open each link and tell us the real faculty, or confirm it is genuinely brand/institute content with no single presenter.
+1. 05-Jul-2026 | Main | Live | Doubt Clearing Session
+   Link: https://www.youtube.com/watch?v=live003
+2. 07-Jul-2026 | Main | Long-form | Fun Friday Quiz Round 12
+   Link: https://www.youtube.com/watch?v=lf004
+3. 06-Jul-2026 | Main | Long-form | Full Mock Test Premiere: Time and Work
+   Link: https://www.youtube.com/watch?v=lf003
+4. 05-Jul-2026 | Main | Short | Orientation Session Walkthrough
+   Link: https://www.youtube.com/watch?v=sh003
+
+C) OTHER ITEMS FLAGGED THIS RUN
+- Live live002: subject left blank, no keyword or faculty default matched: 'Weekly Full Day Marathon: Arjun Rao Sir and Devika Menon'
+- Live live003: subject left blank, no keyword or faculty default matched: 'Doubt Clearing Session'
+- LF lf004: subject left blank, no keyword or faculty default matched: 'Fun Friday Quiz Round 12'
+- LF lf005: multiple faculty named, cannot attribute -- manual split: 'Combined Revision: Arjun Rao Sir and Devika Menon'
+```
+
+Sections A and B are the two "6 item(s)" this window's summary line counts (2
+plus 4); section C is a separate, non-counted log of every subject-parsing
+and multi-faculty case the run flagged along the way, including the two rows
+that also appear in section B.
+
 ## Reproducing it yourself
 
 ```bash
