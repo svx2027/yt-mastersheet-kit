@@ -224,3 +224,15 @@ src/       the shared, channel-agnostic engine (kitconfig, ytdlp_client, categor
 tests/     33 pure-function tests, no network
 .claude/   optional /yt-setup and /yt-mastersheet slash commands + skill, for Claude Code users
 ```
+
+## Related tools
+
+- [yt-competitor-swipe](https://github.com/svx2027/yt-competitor-swipe): a
+  sibling tool from the same tooling series, built with the same
+  config-driven, verify-before-deliver approach, for daily competitive
+  intelligence instead of a channel's own tracker rows.
+- [yt-competitor-outlier-pipeline](https://github.com/svx2027/yt-competitor-outlier-pipeline):
+  shares this kit's "yt-dlp channel tabs are the source of truth" discovery
+  doctrine, applied to outlier detection instead of tracker rows.
+
+Full index of all public repos: [github.com/svx2027](https://github.com/svx2027).
