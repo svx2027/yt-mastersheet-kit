@@ -9,6 +9,13 @@ until a second, independently written pass of the pipeline agrees with the first
 Runs entirely on [yt-dlp](https://github.com/yt-dlp/yt-dlp): no YouTube Data API
 key, no quota to manage.
 
+![Terminal recording of the four-phase pipeline running against the repo's fictional demo vertical: pull, verify, format_master, qa_note, ending on the QA note's flagged items](docs/demo/mastersheet_demo.gif)
+
+The four commands above, run back to back against the fictional demo vertical
+this repo ships (see [Sample run](#sample-run) below) — real captured output,
+not a mockup. Regenerate it yourself with
+[`docs/demo/make_terminal_gif.py`](docs/demo/make_terminal_gif.py).
+
 ## What it does
 
 For a date range, the kit:
@@ -222,6 +229,7 @@ inputs/    faculties / aliases / faculty_emails / subjects (*.example versions s
 src/       the shared, channel-agnostic engine (kitconfig, ytdlp_client, categorize,
            faculty, pull, verify, format_master, qa_note)
 tests/     33 pure-function tests, no network
+docs/      sample_run/ (committed four-phase output) + demo/ (the README GIF + its generator)
 .claude/   optional /yt-setup and /yt-mastersheet slash commands + skill, for Claude Code users
 ```
 
