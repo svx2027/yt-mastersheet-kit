@@ -90,6 +90,11 @@ just documented:
   `Session N` number. Every drop is written to a ledger, nothing disappears
   silently.
 
+The Premiere-vs-livestream rule gets its own writeup —
+[`docs/PLATFORM_NOTES.md`](docs/PLATFORM_NOTES.md) — because the obvious
+signals (which tab it's on, its live-status state, a countdown in the UI) all
+fail on real channels, and only one flag doesn't.
+
 ## Quickstart
 
 ```bash
@@ -229,7 +234,8 @@ inputs/    faculties / aliases / faculty_emails / subjects (*.example versions s
 src/       the shared, channel-agnostic engine (kitconfig, ytdlp_client, categorize,
            faculty, pull, verify, format_master, qa_note)
 tests/     33 pure-function tests, no network
-docs/      sample_run/ (committed four-phase output) + demo/ (the README GIF + its generator)
+docs/      sample_run/ (committed four-phase output), demo/ (the README GIF
+           + its generator), PLATFORM_NOTES.md (Premiere vs. livestream)
 .claude/   optional /yt-setup and /yt-mastersheet slash commands + skill, for Claude Code users
 ```
 
