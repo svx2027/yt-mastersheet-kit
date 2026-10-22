@@ -83,6 +83,8 @@ def resolve_faculty(title: str, existing_faculty, detect, cfg: KitConfig,
 
 
 def shorts_topic(title: str, detected_faculty: str | None, is_english: bool) -> str:
+    """Build the Shorts TOPIC cell: cleaned title, faculty prefix if known,
+    'Eng-' prefix if the short is in English."""
     t = title.replace("|", "-")
     t = re.sub(r"\s+", " ", t).strip().lower()
     topic = f"{t} shorts"
@@ -94,11 +96,15 @@ def shorts_topic(title: str, detected_faculty: str | None, is_english: bool) -> 
 
 
 def is_brand_content(title: str, cfg: KitConfig) -> bool:
+    """True if the title matches a configured brand/institute pattern (no
+    single presenter to attribute -- never a faculty mention, even if one appears)."""
     tl = title.lower()
     return any(p in tl for p in cfg.brand_content_patterns)
 
 
 def to_tsv_block(rows: list[list], expected_tabs: int, sheet: str) -> str:
+    """Join rows into a tab-separated block, halting if any row's tab count
+    doesn't match the sheet's expected column count."""
     lines = []
     for fields in rows:
         line = "\t".join("" if f is None else str(f) for f in fields)
@@ -134,7 +140,9 @@ def dedup_secondary_vs_primary(primary_live: list[dict], sec_live: list[dict]) -
     return kept, ledger
 
 
-def build_live_lf_row(r: dict, base: str, detect, cfg: KitConfig):
+def build_live_lf_row(r: dict, base: str, detect, cfg: KitConfig) -> tuple[list, str | None, bool]:
+    """Build one Live/Long-form tracker row: (fields, flag_text_or_None,
+    is_placeholder_row)."""
     brand = is_brand_content(r["title"], cfg)
     type_label = "YT Live" if base == "Live" else "YT Recorded"
     detected, display, ambiguous = resolve_faculty(r["title"], r.get("faculty"), detect, cfg, brand)
@@ -150,7 +158,9 @@ def build_live_lf_row(r: dict, base: str, detect, cfg: KitConfig):
     return fields, flag, display == cfg.placeholder
 
 
-def build_shorts_row(r: dict, detect, cfg: KitConfig):
+def build_shorts_row(r: dict, detect, cfg: KitConfig) -> tuple[list, str | None, bool]:
+    """Build one Shorts tracker row: (fields, flag_text_or_None,
+    is_placeholder_row)."""
     brand = is_brand_content(r["title"], cfg)
     is_english = r.get("language") == "english"
     detected, display, ambiguous = resolve_faculty(r["title"], None, detect, cfg, brand)
@@ -170,6 +180,9 @@ def parse_args() -> argparse.Namespace:
 
 
 def main() -> int:
+    """Format phase entry point: refuses to run without a PASS verify report,
+    dedups secondary-channel lives against the primary channel, builds every
+    sheet's rows, and writes the blocks plus the dedup/placeholder/flag ledgers."""
     args = parse_args()
     cfg = load_config()
     window = f"{args.start}_to_{args.end}"
